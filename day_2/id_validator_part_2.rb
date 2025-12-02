@@ -1,6 +1,7 @@
 # Part 2 - does not work on big input yet though...
 
 INPUT_FILE="input.txt"
+# expected result: 43872163557
 
 
 class IdValidator
@@ -34,18 +35,18 @@ class IdValidator
 end
 
 def main
-  invalid_ids = []
+  ids_sum = 0
   File.open(INPUT_FILE, "rt") do |f|
     f.read.split(",").each do |range|
       range.gsub!("\n", "")
       start, finish = range.split("-").map { |strnum| Integer(strnum) }
       (start..finish).each do |id|
         id_validator = IdValidator.new(id)
-        invalid_ids.push(id) unless id_validator.valid?
+        ids_sum += id unless id_validator.valid?
       end
     end
   end
-  p invalid_ids.sum()
+  p ids_sum
 end
 
 main()
