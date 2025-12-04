@@ -1,5 +1,6 @@
 INPUT_FILE = "input.txt"
 NUM_DIGITS = 12
+# Expected result: 169349762274117
 # Also works for part 1 if you have NUM_DIGITS set to 2
 
 
