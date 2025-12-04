@@ -1,6 +1,7 @@
 INPUT_FILE = "input.txt"
 PAPER_CHAR = "@"
 EMPTY_CHAR = "."
+# Expected result: 8354
 
 class AccessibilityChecker
   def initialize(coordinates, row_size)
